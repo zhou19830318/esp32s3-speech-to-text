@@ -7,10 +7,10 @@ from machine import I2S, Pin
 #from play_audio import AudioPlayer
 
 # Constants
-SSID = 'zhou'  # replace with your wifi SSID
-PASSWORD = '18961210318'  # replace with your wifi PWD
+SSID = 'xxx'  # replace with your wifi SSID
+PASSWORD = 'xxx'  # replace with your wifi PWD
 BUFFER_SIZE = 8192
-API_KEY = "8776a687e47667712a9dbe3b718430ca.I9K9HlIR6ur2RVJD"  # Replace with your ZhipuAI API key
+API_KEY = "xxx"  # Replace with your ZhipuAI API key
 
 # I2S configuration max98357
 SCK_PIN = 2
@@ -77,7 +77,7 @@ class TextToAudio:
         
         access_token = self.get_access_token()
         if access_token:
-            cuid = "b6pjaMQ2V5U8dSno08sr2N48ZkTCYVYX"
+            cuid = "xxxxx"
             payload = {
                 'tok': access_token,
                 'tex': text,
@@ -166,7 +166,7 @@ def get_ai_response(question):
 
 # Main loop
 def main():
-    api_key = "0ed10ba1914dec5a77d0cde0381d34ab1fb18072"  # Deepgram API key
+    api_key = "xxx"  # Deepgram API key
     connect_wifi()
 
     while True:
@@ -180,8 +180,8 @@ def main():
         if ai_response:
             print(f'AI Response: {ai_response}')
             #process_and_stream_tts(ai_response, api_key)
-            api_key = "6elXsLwX2GsK5hwAlLP5nbBF"
-            secret_key = "ehnwccdCvDrmbu1EGV5wuOWGMEOqzC9m"
+            api_key = "xxx"
+            secret_key = "xxx"
             tta = TextToAudio(api_key, secret_key)
             tta.convert_text_to_audio(ai_response)
             gc.collect()  # Free up memory after each part
