@@ -77,7 +77,7 @@ class TextToAudio:
         
         access_token = self.get_access_token()
         if access_token:
-            cuid = "xxxxx"
+            cuid = "xxxxx" #replace with your baidu cuid
             payload = {
                 'tok': access_token,
                 'tex': text,
@@ -180,8 +180,8 @@ def main():
         if ai_response:
             print(f'AI Response: {ai_response}')
             #process_and_stream_tts(ai_response, api_key)
-            api_key = "xxx"
-            secret_key = "xxx"
+            api_key = "xxx" #replace with your baidu tts api-key
+            secret_key = "xxx" #replace with your baidu tts secret_key
             tta = TextToAudio(api_key, secret_key)
             tta.convert_text_to_audio(ai_response)
             gc.collect()  # Free up memory after each part
