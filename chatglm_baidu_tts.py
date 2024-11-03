@@ -138,7 +138,7 @@ def get_ai_response(question):
         "top_p": 1,
         "n": 1,
         "stream": False,
-        "max_tokens": 1024,
+        "max_tokens": 128,#baidu短语音合成要低于200字
         "presence_penalty": 0,
         "frequency_penalty": 0
     })
